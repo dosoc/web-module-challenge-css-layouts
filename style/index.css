@@ -48,15 +48,18 @@ h1 {
     font-weight: 500;
 }
 header {
-    height: 9vh;
     background: lightgray;
     padding: 2%;
     border-bottom: 1px solid black;
 }
+.links {
+    display: flex;
+
+}
 .navbar {
     margin: 1%;
     display: flex;
-    
+    width: 100%; 
 }
 .nav-button {
     height: 4vh;
@@ -67,9 +70,19 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    flex-shrink: 1;
 }
 .nav-button:hover {
     background-color: rgb(169, 255, 255);
+    transform: scale(1.05);
+    transition: .5s;
+}
+.social-media-links{
+    max-height: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
 }
 a {
     text-decoration: none;
@@ -80,6 +93,10 @@ a {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+.container .project:hover{
+    transform: scale(1.1);
+    transition: .5s;
 }
 .banner {
     padding: 5vh;
@@ -92,7 +109,7 @@ a {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     margin: 4vh;
 }
@@ -100,16 +117,22 @@ a {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.5rem;
     font-weight: 500;
-    padding: 4vh 0;
+    padding: 2vh 0;
 }
 .banner .nav-button {
-    margin: 4vh 0;
+    margin: 2vh 0;
+}
+.banner p {
+    padding: 1vh 0;
+}
+.banner-img{
+    width: 50%;
+    
 
 }
 .banner img {
     flex-shrink: 1;
     max-width: 100%;
-    max-height: 100%;
 }
 .project {
     margin: 4vh;
@@ -129,4 +152,42 @@ footer div {
 }
 footer a{
     margin: 5vh;
+}
+@media (max-width: 800px){
+    .banner {
+        flex-direction: column;
+    }
+    .banner-text {
+        margin-top: 0;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+    }
+    .navbar{
+        margin-top: 2vh;
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-button{
+            width: 25vh;
+        }
+}
+@media (max-width: 500px) {
+    
+    .container {
+        width: 100%;
+    }
+    .project {
+        text-align: center;
+    }
+    .container img{
+        transform: scale(.9);
+        transition: .5s;
+    }
 }
